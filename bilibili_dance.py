@@ -68,7 +68,9 @@ if __name__ == '__main__':
                 title[i] = title[i].replace('|', '。')
             if '*' in title[i]:
                 title[i] = title[i].replace('*', '。')
-
+            if '"' in title[i]:
+                title[i] = title[i].replace('"', '\'')
+                
             print(f"The 【第 {j + 1} 页,排名 {i + 1} 名】 title is: {title[i]}")
             picc = requests.get(pic_url, headers=headers)
             with open('【第' + str(j + 1) + '页,排名第' + str(i + 1) + '名】' + str(title[i]) + '.jpg', 'wb') as f:
