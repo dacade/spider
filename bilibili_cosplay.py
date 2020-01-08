@@ -126,12 +126,3 @@ if __name__ == '__main__':
     save_mongodb(page)
     stop=time.time()
     print_download(f"The software ending...spend time is:{stop-start}")
-    # av,title =save_mongodb(page)
-    # print(av,title)
-    # try:
-    #     for i in range(len(av)):
-    #         print_download('【'+title[i]+'】'+'ready to download...')
-    #         pic_download(av[i],title[i])
-    #         sleep(2)
-    # except:
-    #     print_download(f'【{title}】Download failed...')
